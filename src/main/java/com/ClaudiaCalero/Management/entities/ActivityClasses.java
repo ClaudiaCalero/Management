@@ -11,15 +11,15 @@ public class ActivityClasses {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int class_id;
+    int classId;
 
     String name;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    Date start_date;
+    Date startDate;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    Date end_date;
+    Date endDate;
 
     int capacity;
 
@@ -27,29 +27,29 @@ public class ActivityClasses {
     public ActivityClasses() {
     }
 
-    public ActivityClasses(int class_id, String name, Date start_date, Date end_date, int capacity) {
-        this.class_id = class_id;
+    public ActivityClasses(int classId, String name, Date startDate, Date endDate, int capacity) {
+        this.classId = classId;
         this.name = this.name;
-        this.start_date = start_date;
-        this.end_date = end_date;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.capacity = capacity;
 
     }
 
-    public int getClass_id() {
-        return class_id;
+    public int getClassId() {
+        return classId;
     }
 
     public String getName() {
         return name;
     }
 
-    public Date getStart_date() {
-        return start_date;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
     public int getCapacity() {
@@ -60,10 +60,10 @@ public class ActivityClasses {
 
     @Override
     public String toString() {
-        return "Activity Gym Class: " +
+        return "Activity Class: " +
                 "name='" + name + '\'' +
-                ", start_date=" + start_date +
-                ", end_date=" + end_date +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
                 ", capacity=" + capacity +
                 '.';
     }

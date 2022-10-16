@@ -11,12 +11,12 @@ public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int booking_id;
+    int bookingId;
 
-    String member_name;
+    String memberName;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    Date booking_date;
+    Date bookingDate;
 
     @ManyToOne
     @JsonIgnore
@@ -25,37 +25,37 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int booking_id, String member_name, Date booking_date, ActivityClasses activityClasses) {
-        this.booking_id = booking_id;
-        this.member_name = member_name;
-        this.booking_date = booking_date;
+    public Booking(int bookingId, String memberName, Date bookingDate, ActivityClasses activityClasses) {
+        this.bookingId = bookingId;
+        this.memberName = memberName;
+        this.bookingDate = bookingDate;
         this.activityClasses = activityClasses;
     }
 
 
 
-    public int getBooking_id() {
-        return booking_id;
+    public int getBookingId() {
+        return bookingId;
     }
 
-    public void setBooking_id(int booking_id) {
-        this.booking_id = booking_id;
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
     }
 
-    public String getMember_name() {
-        return member_name;
+    public String getMemberName() {
+        return memberName;
     }
 
-    public void setMember_name(String member_name) {
-        this.member_name = member_name;
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
 
-    public Date getBooking_date() {
-        return booking_date;
+    public Date getBookingDate() {
+        return bookingDate;
     }
 
-    public void setBooking_date(Date booking_date) {
-        this.booking_date = booking_date;
+    public void setBookingDate(Date bookingDate) {
+        this.bookingDate = bookingDate;
     }
 
     public ActivityClasses getActivityClasses() {
@@ -69,9 +69,9 @@ public class Booking {
     @Override
     public String toString() {
         return "Booking: " +
-                "booking_id=" + booking_id +
-                ", member_name='" + member_name + '\'' +
-                ", booking_date='" + booking_date + '\'' +
+                "booking_id=" + bookingId +
+                ", member_name='" + memberName + '\'' +
+                ", booking_date='" + bookingDate + '\'' +
                 '.';
     }
 

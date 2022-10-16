@@ -30,7 +30,7 @@ public class ActivityClassesController {
     @ResponseBody
     public ActivityClasses createActivityClasses(@RequestBody ActivityClasses activityClasses) {
         try {
-            if (activityClasses.getName() == null || activityClasses.getStart_date() == null || activityClasses.getEnd_date() == null)
+            if (activityClasses.getName() == null || activityClasses.getStartDate() == null || activityClasses.getEndDate() == null)
                 throw new ActivityClassesNullException("The request has invalid class name or dates. Check fields.");
             activityClassesService.save(activityClasses);
         } catch (ActivityClassesServiceException e) {

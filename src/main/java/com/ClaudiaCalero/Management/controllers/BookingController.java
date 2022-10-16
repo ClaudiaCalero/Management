@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/bookings")
+
 public class BookingController {
     @Autowired
     BookingService bookingService;
@@ -40,11 +40,11 @@ public class BookingController {
     }
 
 
-    @PostMapping("")
+    @PostMapping("/bookings")
     @ResponseBody
     public Booking createBookings(@RequestBody Booking booking) {
         try {
-            if (booking.getMember_name() == null || booking.getBooking_date() == null)
+            if (booking.getMemberName() == null || booking.getBookingDate() == null)
                 throw new BookingNullException("The request has invalid member_name or class date. Check fields.");
             bookingService.save(booking);
         } catch (BookingServiceException e) {
