@@ -1,61 +1,80 @@
 package com.ClaudiaCalero.Management.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.text.DateFormat;
+import java.util.Date;
 
 @Entity
 public class Booking {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //@Column(name = "id", nullable = false)
-    private Long id;
+    int booking_id;
 
-    @NotEmpty
-    private String name;
+    String member_name;
 
-    @NotNull
-    private DateFormat date;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    Date booking_date;
 
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "class_name")
-    private Classes classes;
-
+    ActivityClasses activityClasses;
 
     public Booking() {
     }
 
-    public Booking(Long id, String name, DateFormat date) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
+    public Booking(int booking_id, String member_name, Date booking_date, ActivityClasses activityClasses) {
+        this.booking_id = booking_id;
+        this.member_name = member_name;
+        this.booking_date = booking_date;
+        this.activityClasses = activityClasses;
     }
 
-    public Long getId() {
-        return id;
+
+
+    public int getBooking_id() {
+        return booking_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setBooking_id(int booking_id) {
+        this.booking_id = booking_id;
     }
 
-    public String getName() {
-        return name;
+    public String getMember_name() {
+        return member_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMember_name(String member_name) {
+        this.member_name = member_name;
     }
 
-    public DateFormat getDate() {
-        return date;
+    public Date getBooking_date() {
+        return booking_date;
     }
 
-    public void setDate(DateFormat date) {
-        this.date = date;
+    public void setBooking_date(Date booking_date) {
+        this.booking_date = booking_date;
     }
+
+    public ActivityClasses getActivityClasses() {
+        return activityClasses;
+    }
+
+    public void setActivityClasses(ActivityClasses activityClasses) {
+        this.activityClasses = activityClasses;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking: " +
+                "booking_id=" + booking_id +
+                ", member_name='" + member_name + '\'' +
+                ", booking_date='" + booking_date + '\'' +
+                '.';
+    }
+
+
 }
+
