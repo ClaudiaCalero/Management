@@ -46,7 +46,7 @@ Data: {
 
 Output data:
 
-![image](https://user-images.githubusercontent.com/92159714/196207714-72655570-a090-4e4a-bcb0-a843c7ac24a4.png)
+![b98f77b0-a49a-49e2-987a-ddb2943ed495](https://user-images.githubusercontent.com/92159714/196208018-f4b8f2b6-7a9c-4555-a242-2140580c241f.jpg)
 
 Bookings API:
 POST: http://localhost:8084/bookings
@@ -58,9 +58,12 @@ Data:  {
 
 Output data:
 
-![image](https://user-images.githubusercontent.com/92159714/196207496-793ce41f-3df7-4fc5-b53a-f620c31eecbd.png)
+![53b62cb6-00e0-4a85-8729-18e68403ef0b](https://user-images.githubusercontent.com/92159714/196208045-393199e3-5038-40be-9952-6a77a4a9f498.jpg)
+
 
 ### What can be improved here:
-Add Frontend 
+Add Frontend
+
 Add Tests
+
 Add validation and error responses
