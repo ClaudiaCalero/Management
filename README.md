@@ -46,7 +46,7 @@ Data: {
 
 Output data:
 
-![img_2.png](img_2.png)
+![image](https://user-images.githubusercontent.com/92159714/196207714-72655570-a090-4e4a-bcb0-a843c7ac24a4.png)
 
 Bookings API:
 POST: http://localhost:8084/bookings
@@ -58,7 +58,7 @@ Data:  {
 
 Output data:
 
-![img_3.png](img_3.png)
+![image](https://user-images.githubusercontent.com/92159714/196207496-793ce41f-3df7-4fc5-b53a-f620c31eecbd.png)
 
 ### What can be improved here:
 Add Frontend 
